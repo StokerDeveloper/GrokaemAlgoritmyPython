@@ -1,16 +1,5 @@
 import random
-
-
-def get_random_list(lenght):
-    list = []
-
-    while len(list) < lenght:
-        item = random.randint(0, 100)
-
-        if item not in list: # добавление только уникальных чисел
-            list.append(item)
-
-    return list
+from utils import get_random_list 
 
 
 def binary_search(list, item):
