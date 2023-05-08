@@ -1,7 +1,8 @@
 import random
-from utils import get_random_list
+from utils import get_random_list, timer
 
 
+@timer
 def fast_sort(list, type):
     if len(list) < 2:
         return list

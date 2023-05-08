@@ -1,4 +1,5 @@
 import random
+import time
 
 
 def get_random_list(lenght):
@@ -35,3 +36,16 @@ def get_largest_index(list):
             largest_index = i
 
     return largest_index
+
+
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.perf_counter()
+
+        result = func(*args, *kwargs)
+
+        print(f"{func.__name__} time: {'{:.5f}'.format(time.perf_counter() - start_time)} second")
+        
+        return result
+
+    return wrapper

@@ -1,7 +1,8 @@
 import random
-from utils import get_random_list 
+from utils import get_random_list, timer
 
 
+@timer
 def binary_search(list, item):
     low = 0
     high = len(list) - 1

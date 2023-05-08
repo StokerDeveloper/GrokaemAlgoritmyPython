@@ -1,7 +1,8 @@
 import random
-from utils import get_random_list, get_smallest_index, get_largest_index
+from utils import get_random_list, get_smallest_index, get_largest_index, timer
 
 
+@timer
 def selection_sort(list, type):
     new_list = []
 

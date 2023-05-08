@@ -1,7 +1,8 @@
-import random
-from utils import get_random_list
+﻿import random
+from utils import get_random_list, timer
 
 # В книге эти функции были реализованы более красиво, но я оставлю так как сделал сам
+@timer
 def sum(list):
     if len(list) == 0:
         return 0
@@ -12,6 +13,7 @@ def sum(list):
     return item + sum(list)
 
 
+@timer
 def get_items_count(list):
     if list == []:
         return 0
@@ -20,6 +22,7 @@ def get_items_count(list):
     return 1 + get_items_count(list)
 
 
+@timer
 def get_largest(list):
     if len(list) == 0:
         return None
